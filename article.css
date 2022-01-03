@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+    font-family: OldLondon;
+    src: url(OldLondon.ttf);
+}
+
+:root {
+    --cor: black;
+	--cor-leve: rgb(50, 50, 50);
+	--cor-fundo: rgb(252, 245, 245);
+	--cor-fundo-des: rgba(0, 0, 0, 0.021);
+	--cor-icone: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--cor: white;
+		--cor-leve: rgb(205, 205, 205);
+		--cor-fundo: rgb(37, 32, 32);
+		--cor-fundo-des: rgba(255, 255, 255, 0.021);
+		--cor-icone: invert(1);
+	}
+}
+
+html * {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	color: var(--cor);
+	padding: 0px 7rem;
+    background: var(--cor-fundo);
+	font-family: roboto;
+}
+
+@media (max-width: 1000px) {
+	body {
+		padding: 0px 1.5rem;
+	}
+}
+@media (min-width: 850px) {
+	img {
+		float: left;
+		margin: 0px 2rem 1rem 0px !important;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 999px) {
+	h1 {
+		font-size: 5rem !important;
+	}
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+#barra {
+    margin: 0.75rem auto 0px auto;
+    border-top: 2px solid var(--cor-leve);
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: OldLondon;
+    text-align: center;
+    font-weight: 550;
+	transition: 200ms;
+}
+
+header a {
+	color: var(--cor);
+	text-decoration: none;
+}
+
+header a:hover h1 {
+	transform: scale(1.1);
+}
+
+main {
+    margin-bottom: 2rem;
+    padding: 0px 50px;
+}
+
+
+
+
+h2 {
+    color: var(--cor);
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+p {
+    color: var(--cor-leve);
+    text-align:justify;
+    margin: 1rem 2rem;
+}
+
+img {
+	display: block;
+	margin: 2rem auto;
+	width: 30rem;
+	box-shadow: 0 0 0 .4rem var(--cor-fundo), 0 0 0 .6rem var(--cor-leve);
+}
